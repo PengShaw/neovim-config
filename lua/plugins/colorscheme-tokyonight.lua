@@ -1,10 +1,12 @@
-local csTable =require("config.variables").colorschemeTable
+local customData =require("config.variables").colorschemeTable
+
+function config()
+  vim.cmd("colorscheme " .. customData.colorscheme)
+end
 
 return {
-  csTable.url,
+  customData.url,
   lazy = false,
   priority = 1000,
-  config = function()
-    vim.cmd("colorscheme " .. csTable.colorscheme)
-  end
+  config = config,
 }
