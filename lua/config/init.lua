@@ -20,6 +20,7 @@ local M = {}
 function M.setup()
   --- basic config ---
   require "config.options"
+  require "config.keymaps"
   --- lazy.nvim
   lazySetup()
   --- plugins ---
