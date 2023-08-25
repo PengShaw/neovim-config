@@ -26,6 +26,8 @@ function M.setup()
   --- plugins ---
   --- load plugins
   require("lazy").setup("plugins")
+  --- autocmd ---
+  require "config.autocmd"
 end
 
 return M

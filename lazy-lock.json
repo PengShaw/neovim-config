@@ -1,8 +1,12 @@
 {
   "bufferline.nvim": { "branch": "main", "commit": "d24378edc14a675c820a303b4512af3bbc5761e9" },
-  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
+  "lazy.nvim": { "branch": "main", "commit": "dac844ed617dda4f9ec85eb88e9629ad2add5e05" },
   "lualine-lsp-progress": { "branch": "master", "commit": "56842d097245a08d77912edf5f2a69ba29f275d7" },
   "lualine.nvim": { "branch": "master", "commit": "45e27ca739c7be6c49e5496d14fcf45a303c3a63" },
+  "mason-lspconfig": { "branch": "main", "commit": "2997f467881ac4faa6f8c5e7065e3a672297c8ad" },
+  "mason-tool-installer.nvim": { "branch": "main", "commit": "031903fefbf59371502092ef9e22cab9161d90ba" },
+  "mason.nvim": { "branch": "main", "commit": "a51c2d063c5377ee9e58c5f9cda7c7436787be72" },
+  "nvim-lspconfig": { "branch": "master", "commit": "f7922e59aeb9bc3e31a660ea4e7405ffa3fc2c3a" },
   "nvim-tree.lua": { "branch": "master", "commit": "920868dba13466586897a8f40220eca6b2caac41" },
   "nvim-web-devicons": { "branch": "master", "commit": "cfc8824cc1db316a276b36517f093baccb8e799a" },
   "tokyonight.nvim": { "branch": "main", "commit": "1ee11019f8a81dac989ae1db1a013e3d582e2033" }
