@@ -6,6 +6,7 @@
   "mason-lspconfig": { "branch": "main", "commit": "2997f467881ac4faa6f8c5e7065e3a672297c8ad" },
   "mason-tool-installer.nvim": { "branch": "main", "commit": "031903fefbf59371502092ef9e22cab9161d90ba" },
   "mason.nvim": { "branch": "main", "commit": "a51c2d063c5377ee9e58c5f9cda7c7436787be72" },
+  "nvim-lint": { "branch": "master", "commit": "29df35ea2ac5af0f85d8f0f40bddbd7fdaa8c492" },
   "nvim-lspconfig": { "branch": "master", "commit": "f7922e59aeb9bc3e31a660ea4e7405ffa3fc2c3a" },
   "nvim-tree.lua": { "branch": "master", "commit": "920868dba13466586897a8f40220eca6b2caac41" },
   "nvim-web-devicons": { "branch": "master", "commit": "cfc8824cc1db316a276b36517f093baccb8e799a" },

@@ -48,3 +48,28 @@ map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 -- close tab
 map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
+
+-- lsp
+--map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
+--map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+-- go xx
+--map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+--map("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+--map("n", "gdc", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
+--map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
+--map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
+-- diagnostic
+--map("n", "gf", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+--map("n", "gp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
+--map("n", "gn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
+--map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
+-- more
+--map('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
+--map("n", "<leader>sh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
+--map('n', '<leader>awf', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
+--map('n', '<leader>rwf', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
+--map('n', '<leader>lwf', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
+--map('n', '<leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
+
+
+
