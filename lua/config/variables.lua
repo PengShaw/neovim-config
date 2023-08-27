@@ -47,4 +47,8 @@ keys.nvimLintTable = {
   },
 }
 
+keys.nvimTreesitterTable = {
+  ensure_installed = { "lua" },
+}
+
 return keys
