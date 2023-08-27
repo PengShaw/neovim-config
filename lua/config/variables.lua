@@ -15,11 +15,12 @@ keys.masonTable = {
     "lua_ls",
   },
   tool_ensure_installed = {
+    -- lua
     -- should install luarocks first
+    -- should install cmake
     -- https://github.com/luarocks/luarocks/wiki/Installation-instructions-for-Unix
     "luacheck",
-    -- should install cmake
-    "luaformatter",
+    "stylua",
   },
   -- See `:h mason-lspconfig.setup_handlers()`
   handlers = {

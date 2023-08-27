@@ -71,5 +71,7 @@ map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
 --map('n', '<leader>lwf', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
 --map('n', '<leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 
-
+-- formatter
+map('n', '<leader>f', ':Format<CR>', opt)
+map('n', '<leader>fw', ':FormatWrite<CR>', opt)
 
