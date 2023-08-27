@@ -73,6 +73,20 @@ map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
 map("n", "<leader>f", ":Format<CR>", opt)
 map("n", "<leader>fw", ":FormatWrite<CR>", opt)
 
+-- Telescope
+-- find files
+map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- global grep
+map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+pluginKeys.telescope = {
+  i = {
+    -- up / down move in preview windows
+    ["<C-u>"] = "preview_scrolling_up",
+    ["<C-d>"] = "preview_scrolling_down",
+  },
+}
+
+
 -- cmp
 pluginKeys.cmp = function(cmp)
   return {
