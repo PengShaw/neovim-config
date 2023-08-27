@@ -73,4 +73,30 @@ map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
 map("n", "<leader>f", ":Format<CR>", opt)
 map("n", "<leader>fw", ":FormatWrite<CR>", opt)
 
+-- cmp
+pluginKeys.cmp = function(cmp)
+  return {
+    -- show cmp
+    ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+    -- cancel cmp
+    ["<A-,>"] = cmp.mapping({
+      i = cmp.mapping.abort(),
+      c = cmp.mapping.close()
+    }),
+    -- previous
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    -- next
+    ["<C-j>"] = cmp.mapping.select_next_item(),
+    -- confirt
+    ["<CR>"] = cmp.mapping.confirm({
+      select = true,
+      behavior = cmp.ConfirmBehavior.Replace
+    }),
+    -- scroll
+    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+  }
+end
+
+
 return pluginKeys
