@@ -1,4 +1,4 @@
-function config() 
+local function config()
   require("lualine").setup {
     options = {
       theme = "tokyonight",
@@ -8,8 +8,8 @@ function config()
     },
     extensions = { "nvim-tree" },
     sections = {
-      lualine_c = {"filename", "lsp_progress"},
-      lualine_x = {'filesize', 'encoding', 'fileformat', 'filetype'},
+      lualine_c = { "filename", "lsp_progress" },
+      lualine_x = { 'filesize', 'encoding', 'fileformat', 'filetype' },
     },
   }
 end

@@ -25,26 +25,26 @@ keys.masonTable = {
   -- See `:h mason-lspconfig.setup_handlers()`
   handlers = {
     function(server_name)
-      require("lspconfig")[server_name].setup {}
+      require("lspconfig")[server_name].setup({})
     end,
-    ["lua_ls"] = function ()
-      require("lspconfig").lua_ls.setup {
+    ["lua_ls"] = function()
+      require("lspconfig").lua_ls.setup({
         settings = {
           Lua = {
             diagnostics = {
-              globals = { "vim" }
-            }
-          }
-        }
-      }
+              globals = { "vim" },
+            },
+          },
+        },
+      })
     end,
   },
 }
 
 keys.nvimLintTable = {
   linters_by_ft = {
-    lua = {'luacheck',}
-  }
+    lua = { "luacheck" },
+  },
 }
 
 return keys

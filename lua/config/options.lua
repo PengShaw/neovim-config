@@ -57,7 +57,6 @@ opt.splitright = true
 opt.termguicolors = true
 opt.termguicolors = true
 
-
 -- no wrap
 opt.wrap = false
 -- minimal number of line to keep when the cursor move up/down/right/left, when wrap is off
@@ -65,19 +64,17 @@ opt.scrolloff = 8
 opt.sidescrolloff = 8
 -- show line number
 opt.number = true
--- highlight current row 
+-- highlight current row
 opt.cursorline = true
 -- left sign column
 opt.signcolumn = "yes"
 --- cmd height
 opt.cmdheight = 1
 
-
 --- cmp
 opt.completeopt = "menu,menuone,noselect,noinsert"
 ---command-line completion is enhanced
 opt.wildmenu = true
-
 
 --- Dont' pass messages to |ins-completin menu|
 opt.shortmess = vim.o.shortmess .. "c"
@@ -89,4 +86,3 @@ opt.showtabline = 2
 opt.showmode = false
 --- system clipboard
 opt.clipboard = "unnamedplus"
-

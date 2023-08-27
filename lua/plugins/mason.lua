@@ -1,6 +1,6 @@
 local customData = require("config.variables").masonTable
 
-function config()
+local function config()
   require("mason").setup()
   require("mason-lspconfig").setup {
     ensure_installed = customData.lsconfig_ensure_installed,
@@ -13,7 +13,7 @@ end
 
 return {
   "williamboman/mason.nvim",
-  dependencies = { 
+  dependencies = {
     "williamboman/mason-lspconfig",
     "neovim/nvim-lspconfig",
     'WhoIsSethDaniel/mason-tool-installer.nvim',

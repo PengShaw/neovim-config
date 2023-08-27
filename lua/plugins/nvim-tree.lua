@@ -1,6 +1,6 @@
 local customData = require("config.variables").nvimTreeTable
 
-function config()
+local function config()
   require("nvim-tree").setup {
     filters = {
       dotfiles = customData.filters_dotfiles,

@@ -17,7 +17,6 @@ local opt = {
 local map = vim.api.nvim_set_keymap
 local pluginKeys = {}
 
-
 -- Slipt to a terminal windows
 map("n", "<A-s>", ":sp | terminal<CR>", opt)
 -- Slipt windows
@@ -37,7 +36,6 @@ map("n", "<C-Right>", ":vertical resize +4<CR>", opt)
 map("n", "<C-Down>", ":resize +4<CR>", opt)
 map("n", "<C-Up>", ":resize -4<CR>", opt)
 map("n", "<leader>s=", "<C-w>=", opt)
-
 
 -- nvim-tree
 map("n", "<A-t>", ":NvimTreeToggle<CR>", opt)
@@ -72,6 +70,7 @@ map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
 --map('n', '<leader>td', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 
 -- formatter
-map('n', '<leader>f', ':Format<CR>', opt)
-map('n', '<leader>fw', ':FormatWrite<CR>', opt)
+map("n", "<leader>f", ":Format<CR>", opt)
+map("n", "<leader>fw", ":FormatWrite<CR>", opt)
 
+return pluginKeys

@@ -1,5 +1,5 @@
-function config()
-  require("bufferline").setup{
+local function config()
+  require("bufferline").setup {
     options = {
       -- offsets for nvim-tree
       offsets = {
@@ -9,13 +9,13 @@ function config()
           highlight = "Directory",
           text_align = "left",
         },
-      },  
+      },
       -- LSP indicators
       diagnostics = "nvim_lsp",
-      diagnostics_indicator = function(count, level, diagnostics_dict, context)
+      diagnostics_indicator = function(_, _, diagnostics_dict, _)
         local s = " "
         for e, n in pairs(diagnostics_dict) do
-          local sym = e == "error" and " " or (e == "warning" and " " or "" )
+          local sym = e == "error" and " " or (e == "warning" and " " or "")
           s = s .. n .. sym
         end
         return s
@@ -24,10 +24,9 @@ function config()
   }
 end
 
-
 return {
-  'akinsho/bufferline.nvim', 
-  version = "*", 
+  'akinsho/bufferline.nvim',
+  version = "*",
   dependencies = 'nvim-tree/nvim-web-devicons',
   config = config,
 }

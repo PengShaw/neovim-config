@@ -1,4 +1,4 @@
-function lazySetup()
+local function lazySetup()
   local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
   if not vim.loop.fs_stat(lazypath) then
     vim.notify("Downloading lazy.nvim ...")
@@ -19,15 +19,15 @@ local M = {}
 
 function M.setup()
   --- basic config ---
-  require "config.options"
-  require "config.keymaps"
+  require("config.options")
+  require("config.keymaps")
   --- lazy.nvim
   lazySetup()
   --- plugins ---
   --- load plugins
   require("lazy").setup("plugins")
   --- autocmd ---
-  require "config.autocmd"
+  require("config.autocmd")
 end
 
 return M

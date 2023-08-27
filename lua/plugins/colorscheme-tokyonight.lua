@@ -1,6 +1,6 @@
-local customData =require("config.variables").colorschemeTable
+local customData = require("config.variables").colorschemeTable
 
-function config()
+local function config()
   vim.cmd("colorscheme " .. customData.colorscheme)
 end
 

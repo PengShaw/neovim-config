@@ -1,7 +1,7 @@
-local util = require "formatter.util"
+local util = require("formatter.util")
 
 return {
-  require("formatter.filetypes.lua").luaformatter,
+  require("formatter.filetypes.lua").stylua,
   function()
     -- if util.get_current_buffer_file_name() == "special.lua" then
     --  return nil
@@ -20,5 +20,5 @@ return {
       },
       stdin = true,
     }
-  end
+  end,
 }
