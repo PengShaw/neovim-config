@@ -84,5 +84,5 @@ opt.pumheight = 10
 opt.showtabline = 2
 --- use lualine plugin instead
 opt.showmode = false
---- system clipboard
+--- system clipboard, wsl should install win32yank
 opt.clipboard = "unnamedplus"
