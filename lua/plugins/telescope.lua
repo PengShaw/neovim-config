@@ -1,8 +1,7 @@
-local function config()
-end
+local function config() end
 
 return {
-  'nvim-telescope/telescope.nvim',
-  dependencies = { 'nvim-lua/plenary.nvim' },
-  config = config,
+	"nvim-telescope/telescope.nvim",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	config = config,
 }

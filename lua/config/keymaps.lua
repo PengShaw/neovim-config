@@ -11,8 +11,8 @@ vim.g.mapleader = "`"
 vim.g.maplocalleader = "`"
 
 local opt = {
-  noremap = true,
-  silent = true,
+	noremap = true,
+	silent = true,
 }
 local map = vim.api.nvim_set_keymap
 local pluginKeys = {}
@@ -79,50 +79,49 @@ map("n", "<C-f>", ":Telescope find_files<CR>", opt)
 -- global grep
 map("n", "<C-g>", ":Telescope live_grep<CR>", opt)
 pluginKeys.telescope = {
-  i = {
-    -- up / down move in preview windows
-    ["<C-u>"] = "preview_scrolling_up",
-    ["<C-d>"] = "preview_scrolling_down",
-  },
+	i = {
+		-- up / down move in preview windows
+		["<C-u>"] = "preview_scrolling_up",
+		["<C-d>"] = "preview_scrolling_down",
+	},
 }
-
 
 -- cmp
 pluginKeys.cmp = function(cmp)
-  return {
-    -- show cmp
-    ["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
-    -- cancel cmp
-    ["<A-,>"] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close()
-    }),
-    -- previous
-    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
-    -- next
-    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
-    -- confirt
-    ["<CR>"] = cmp.mapping.confirm({
-      select = true,
-      behavior = cmp.ConfirmBehavior.Replace
-    }),
-    -- scroll
-    ["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
-    ["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
-  }
+	return {
+		-- show cmp
+		["<A-.>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
+		-- cancel cmp
+		["<A-,>"] = cmp.mapping({
+			i = cmp.mapping.abort(),
+			c = cmp.mapping.close(),
+		}),
+		-- previous
+		["<S-Tab>"] = cmp.mapping(cmp.mapping.select_prev_item(), { "i", "c" }),
+		-- next
+		["<Tab>"] = cmp.mapping(cmp.mapping.select_next_item(), { "i", "c" }),
+		-- confirt
+		["<CR>"] = cmp.mapping.confirm({
+			select = true,
+			behavior = cmp.ConfirmBehavior.Replace,
+		}),
+		-- scroll
+		["<C-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
+		["<C-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+	}
 end
 
 -- nvim-treesitter
 pluginKeys.nvimTreesitter = {
-  incremental_selection = {
-    enable = true,
-    keymaps = {
-      init_selection = "<CR>",
-      node_incremental = "<CR>",
-      node_decremental = "<BS>",
-      scope_incremental = "<TAB>",
-    },
-  }
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<CR>",
+			node_incremental = "<CR>",
+			node_decremental = "<BS>",
+			scope_incremental = "<TAB>",
+		},
+	},
 }
 
 return pluginKeys
