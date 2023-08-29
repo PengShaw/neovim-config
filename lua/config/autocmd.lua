@@ -26,3 +26,10 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 		vim.cmd("FormatWrite")
 	end,
 })
+
+-- lint
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	callback = function()
+		require("lint").try_lint()
+	end,
+})

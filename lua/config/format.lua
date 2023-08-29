@@ -1,5 +1,6 @@
 return {
 	lua = require("formatter.filetypes.lua").stylua,
+	ruby = require("formatter.filetypes.ruby").standardrb,
 	-- Use the special "*" filetype for defining formatter configurations on
 	-- any filetype
 	["*"] = {
