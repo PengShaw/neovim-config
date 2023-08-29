@@ -18,13 +18,13 @@ local map = vim.api.nvim_set_keymap
 local pluginKeys = {}
 
 -- Slipt to a terminal windows
-map("n", "<A-s>", ":sp | terminal<CR>", opt)
+map("n", "<A-w>", ":sp | terminal<CR>", opt)
 -- Slipt windows
-map("n", "<leader>s", ":vsp<CR>", opt)
+map("n", "<leader>w", ":vsp<CR>", opt)
 -- close current windows
-map("n", "<leader>sc", "<C-w>c", opt)
+map("n", "<leader>wc", "<C-w>c", opt)
 -- close other windows
-map("n", "<leader>so", "<C-w>o", opt)
+map("n", "<leader>wo", "<C-w>o", opt)
 -- ctrl + hjkl, jump into ohter windows
 map("n", "<C-h>", "<C-w>h", opt)
 map("n", "<C-j>", "<C-w>j", opt)
@@ -35,7 +35,7 @@ map("n", "<C-Left>", ":vertical resize -4<CR>", opt)
 map("n", "<C-Right>", ":vertical resize +4<CR>", opt)
 map("n", "<C-Down>", ":resize +4<CR>", opt)
 map("n", "<C-Up>", ":resize -4<CR>", opt)
-map("n", "<leader>s=", "<C-w>=", opt)
+map("n", "<leader>w=", "<C-w>=", opt)
 
 -- nvim-tree
 map("n", "<A-t>", ":NvimTreeToggle<CR>", opt)
@@ -45,19 +45,19 @@ map("n", "<A-t>", ":NvimTreeToggle<CR>", opt)
 map("n", "<A-h>", ":BufferLineCyclePrev<CR>", opt)
 map("n", "<A-l>", ":BufferLineCycleNext<CR>", opt)
 -- close tab
-map("n", "<leader>bc", ":BufferLineCloseOther<CR>", opt)
+map("n", "<leader>tc", ":BufferLineCloseOther<CR>", opt)
 
 -- lsp
 --map("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
 --map("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
 -- go xx
---map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
---map("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
---map("n", "gdc", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
+map("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
+map("n", "gh", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
+map("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
 --map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
 --map("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
 -- diagnostic
---map("n", "gf", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
+map("n", "gf", "<cmd>lua vim.diagnostic.open_float()<CR>", opt)
 --map("n", "gp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opt)
 --map("n", "gn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
 --map("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opt)
@@ -75,9 +75,9 @@ map("n", "<leader>fw", ":FormatWrite<CR>", opt)
 
 -- Telescope
 -- find files
-map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+map("n", "<C-f>", ":Telescope find_files<CR>", opt)
 -- global grep
-map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+map("n", "<C-g>", ":Telescope live_grep<CR>", opt)
 pluginKeys.telescope = {
   i = {
     -- up / down move in preview windows
@@ -98,9 +98,9 @@ pluginKeys.cmp = function(cmp)
       c = cmp.mapping.close()
     }),
     -- previous
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
+    ['<S-Tab>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
     -- next
-    ["<C-j>"] = cmp.mapping.select_next_item(),
+    ['<Tab>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
     -- confirt
     ["<CR>"] = cmp.mapping.confirm({
       select = true,
